@@ -1,0 +1,133 @@
+
+RAW DATA AND UPC  Hennessy Cognac Vs Lebron James Gift Limited Edition 81753840587
+##  Alcohol Product Enrichment Prompt (Final Template) 🧼🍷  
+**Objective:** Clean, enrich, and organize alcohol product data. Start with UPC number as mandatory reference. Follow vertical order for naming and categorization.
+
+---
+### 🔐 STEP 1: UPC CHECK ✅  
+**Start with this given UPC:**  
+📥 `UPC: [Type here]`
+
+🔁 Try these variations to check validity:  
+1. Original UPC  
+2. Add 0000 → `0000[UPC]`  
+3. Add 000 → `000[UPC]`  
+4. Add 00 → `00[UPC]`  
+5. Add 0 → `0[UPC]`  
+6. Remove leading zeros one by one (if present)
+
+**Check validity using these trusted sources:**
+- 🔍 [Google UPC Check](https://www.google.com/search?q=[Insert UPC])  
+- 🍷 Wine: [Wine-Searcher](http://www.wine-searcher.com/)  
+- 🥃 Spirits: [TotalWine](https://www.totalwine.com/)  
+- 🍺 Beer: [Untappd](https://untappd.com/)
+
+➡️ **MANDATORY:** Take product data from UPC number  
+➡️ **Provide direct UPC link:**  
+🔗 https://www.google.com/search?q=[Final Used UPC]
+
+---
+
+### 📊 STEP 2: VERTICAL ORDERED FIELD EXTRACTION  
+Extract all possible data in the following strict order (leave blank if not available):
+
+```
+Brand:  
+Dietary Tags:  
+Flavour:  
+Variation:  
+Size:  
+Colour:  
+Age:  
+Item Name / Alcohol Type:  
+Container Type:  
+Appellation:  
+Location:  
+Vintage Year:  
+Weight:  
+Volume:  
+Count & UOM Container Type:  
+```
+
+📝 You may refer to:
+- Raw Size field(s)
+- Item name or description
+- Product type or brand paths  
+- External sources (Wine Searcher, TotalWine, Untappd)
+
+---
+
+### 🖼 STEP 3: SUGGEST PRODUCT IMAGE  
+Use product details to search for a valid image. Provide:
+- ✅ Google Image Search Link  
+- ✅ Direct Preview Image URL (if available)  
+
+🔍 Example Search:  
+`[Brand] [Alcohol Type] [Size]`
+
+---
+
+### 🧼 STEP 4: CLEANED ITEM NAME GENERATOR  
+Using vertical order values, generate the final cleaned product name in the following structure:  
+```
+[Brand] [Dietary Tags] [Flavour] [Variation] [Size] [Colour] [Age] [Alcohol Type] [Container Type] [Appellation] [Location] [Vintage Year] ([Size & UOM])
+```
+
+➡️ **Woflow Cleaned Item Name:**  
+`[Insert cleaned name here]`
+
+---
+
+### 🗂 STEP 5: PRODUCT CATEGORY PATH  
+Based on alcohol type and vertical data, create a **Woflow-style category path**.  
+Examples:
+- Alcohol > Beer > Lager > Pilsners  
+- Alcohol > Wine > Red Wine > Merlot  
+- Alcohol > Spirits > Whiskey > Bourbon
+
+➡️ **Woflow product_category_path:**  
+`[Insert here]`
+
+---
+
+### 📦 STEP 6: FINAL OUTPUT FORMAT
+
+```
+🔍 UPC Check:
+Main UPC:  
+Tried Variants:  
+Final Used UPC:  
+🔗 Direct UPC Google Link: https://www.google.com/search?q=[Final Used UPC]
+
+📌 Vertical Fields:
+Brand:  
+Dietary Tags:  
+Flavour:  
+Variation:  
+Size:  
+Colour:  
+Age:  
+Item Name / Alcohol Type:  
+Container Type:  
+Appellation:  
+Location:  
+Vintage Year:  
+Weight:  
+Volume:  
+Count & UOM Container Type:  
+
+🖼 Suggested Image:
+[Paste Google search or image URL]
+
+🧼 Cleaned Item Name:
+[Paste cleaned name]
+
+Give me : 🧼 Suggestion from brand web or google Cleaned Item Name:
+
+🗂 Product Category Path:
+[Paste path]
+
+💡 Suggestions:
+[Add any notes, assumptions, missing data, or verification doubts]
+```
+
